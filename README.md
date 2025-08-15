@@ -1,6 +1,6 @@
-# Blog CI Demo 📝🚀
+# Blog CD Demo 📝🚀
 
-This is a simple blog application built with **Node.js**, **Express**, **EJS**, and **MySQL** — created primarily to demonstrate **Continuous Integration (CI)** using **GitHub Actions**.
+This is a simple blog application built with **Node.js**, **Express**, **EJS**, and **MySQL** — created primarily to demonstrate **Continuous Integration (CD)** using **GitHub Actions**.
 
 ---
 
@@ -10,15 +10,15 @@ This is a simple blog application built with **Node.js**, **Express**, **EJS**, 
 - Express.js
 - EJS (Embedded JavaScript Templates)
 - MySQL
-- GitHub Actions (CI)
+- GitHub Actions (CD)
 
 ---
 
 ## 📁 Folder Structure
 
 ```
-Blog-CI-Demo/
-├── .github/workflows/       # GitHub Actions CI workflow
+Blog-CD-Demo/
+├── .github/workflows/       # GitHub Actions CD workflow
 ├── views/                   # EJS templates
 ├── index.js                 # Entry point of the app
 ├── package.json             # Project metadata and dependencies
@@ -32,8 +32,8 @@ Blog-CI-Demo/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/ptlvaibhav/Blog-CI-Demo.git
-cd Blog-CI-Demo
+git clone https://github.com/ptlvaibhav/Blog-CD-Demo.git
+cd Blog-CD-Demo
 ```
 
 ### 2. Install Dependencies
@@ -68,9 +68,9 @@ Visit: `http://localhost:3000`
 
 ---
 
-## 🤖 GitHub Actions CI
+## 🤖 GitHub Actions CD
 
-This repository includes a CI pipeline using GitHub Actions.
+This repository includes a CD pipeline using GitHub Actions.
 
 - Location: `.github/workflows/node.js.yml`
 - Tasks:
@@ -90,4 +90,3 @@ This repository is intended for **educational and demonstration purposes only**.
 ## 🙋‍♂️ Author
 
 Created and maintained by [@ptlvaibhav](https://github.com/ptlvaibhav)
-# Blog-CD-Demo
