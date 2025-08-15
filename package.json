@@ -4,7 +4,7 @@
     "lint": "npx eslint .",
     "test": "jest",
     "build": "tsc && cp -R views dist/views",
-    "prepare": "husky"
+    "prepare": "husky install"
   },
   "dependencies": {
     "dotenv": "^16.5.0",
