@@ -29,11 +29,8 @@ services:
     networks:
       - blog-app-net
   blog-server:
-    image: ptlvaibhav/blog-demo-app:build-8
+    image: ptlvaibhav/blog-demo-app:build-e7861a60b546e56120563badb6ac5c250c89ab70
     deploy:
-      # placement:
-      #   constraints:
-      #   - node.role = worker 
       replicas: 1
       update_config:
         order: start-first
