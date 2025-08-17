@@ -1,8 +1,7 @@
 services:
-
   blog-db:
-    image: 'mysql'
-    deploy: 
+    image: mysql
+    deploy:
       replicas: 1
       update_config:
         order: start-first
@@ -11,8 +10,13 @@ services:
       rollback_config:
         parallelism: 1
         order: start-first
-    healthcheck: 
-      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost']
+    healthcheck:
+      test:
+        - CMD
+        - mysqladmin
+        - ping
+        - '-h'
+        - localhost
       interval: 10s
       timeout: 5s
       retries: 3
@@ -24,9 +28,8 @@ services:
       - '3306:3306'
     networks:
       - blog-app-net
-
   blog-server:
-    image: 'ptlvaibhav/blog-demo-app:v1'
+    image: ptlvaibhav/blog-demo-app:build-8
     deploy:
       # placement:
       #   constraints:
@@ -39,8 +42,14 @@ services:
       rollback_config:
         parallelism: 1
         order: start-first
-    healthcheck: 
-      test: ['CMD', 'wget', '--no-verbose', '--tries=1', '--spider', 'http://localhost:3000/health',]
+    healthcheck:
+      test:
+        - CMD
+        - wget
+        - '--no-verbose'
+        - '--tries=1'
+        - '--spider'
+        - http://localhost:3000/health
       interval: 10s
       timeout: 5s
       retries: 3
@@ -54,9 +63,7 @@ services:
       - NODE_HOST="{{.Node.Hostname}}"
     networks:
       - blog-app-net
-
 volumes:
-  blog-db-vol: 
-
+  blog-db-vol: null
 networks:
-  blog-app-net:
+  blog-app-net: null
