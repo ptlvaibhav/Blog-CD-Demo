@@ -31,7 +31,10 @@ services:
   blog-server:
     image: ptlvaibhav/blog-demo-app:build-8
     deploy:
-      replicas: 3
+      # placement:
+      #   constraints:
+      #   - node.role = worker 
+      replicas: 1
       update_config:
         order: start-first
         failure_action: rollback
