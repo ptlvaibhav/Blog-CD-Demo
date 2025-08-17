@@ -29,7 +29,7 @@ services:
     networks:
       - blog-app-net
   blog-server:
-    image: ptlvaibhav/blog-demo-app:build-e7861a60b546e56120563badb6ac5c250c89ab70
+    image: ptlvaibhav/blog-demo-app:build-bd13117f64165d53c30608818c1f00ffb0b602a0
     deploy:
       replicas: 1
       update_config:
